@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f9f9f9;
+}
+.calendar-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cal-header h1 {
+  text-align: center;
+}
+.month {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  background-color: teal;
+  padding: 15px 10px;
+  border-radius: 15px 15px 0 0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.month h2:nth-child(2) {
+	color: orange;
+}
+.cal-body {
+  background-color: #fff;
+  border-radius: 0 0 15px 15px;
+  width: 382px;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px 90px 6px rgba(0, 0, 0, 0.1);
+}
+.cal-body li {
+  list-style-type: none;
+  display: inline-block;
+  padding-top: 4%;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  margin: 10px 2px;
+  border-radius: 50%;
+  /*transition: background-color 0.2s ease-in;*/
+}
+.spec {
+  font-weight: bold;
+}
+.spec:hover {
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: black !important;
+}
+.cal-body .dates:hover {
+  background-color: rgba(255, 99, 71, 0.411);
+  color: white;
+}
+.cal-body li.active {
+  background-color: tomato;
+  color: white;
+  border: 1px solid rgb(240, 92, 66);
+}
+.cal-body li.clicked {
+  background-color: rgba(255, 99, 71, 0.568);
+  color: white;
+}
+.cal-pagination {
+  display: flex;
+  justify-content: space-between;
+}
+.cal-pagination p {
+  font-size: 20px;
+}
+.next,
+.prev {
+  background-color: teal;
+  padding: 10px 33px;
+  color: white;
+  cursor: pointer;
+  border-radius: 15px 0 15px 0;
+}
+.next {
+  border-radius: 0 15px 0 15px;
+}
